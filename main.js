@@ -1,10 +1,14 @@
 canvas=document.getElementById('myCanvas');
 ctx=canvas.getContext("2d");
+nasa_mars_images_array=["mars1.jpg","mars2.jpg","mars3.jpg","mars4.jpg","mars.jpg"];
+random_number=Math.floor(Math.random()*5);
+console.log(random_number);
 rover_width=100;
 rover_height=90;
 rover_x=10;
 rover_y=10;
-background_image="mars.jpg";
+background_image=nasa_mars_images_array[random_number];
+console.log("background_image"+background_image);
 rover_image="rover.png";
 function add(){
     background_imgTag=new Image();
@@ -40,6 +44,7 @@ function my_keydown(e){
         right();
         console.log("right");
     }
+   
 }
 function up(){
     if(rover_y>=0){
